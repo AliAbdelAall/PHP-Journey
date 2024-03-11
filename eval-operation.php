@@ -41,7 +41,7 @@ function evaluateOperation($operation){
           }
         }else {
           $operator = $operation[$i];
-          echo $operator;
+          
         }
         if(!$operator && $first_op){
           $result += $num;
