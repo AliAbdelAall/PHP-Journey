@@ -1,5 +1,19 @@
 <?php
 
+function sortNumbers($arr){
+  for($i = 0; $i < count($arr) - 1; $i++){
+    for($j = $i + 1; $j < count($arr); $j++){
+      if ($arr[$i] > $arr[$j]){
+        $temp = $arr[$i];
+        $arr[$i] = $arr[$j];
+        $arr[$j] = $temp;
+      }
+    }
+  }
+  return $arr;
+}
+
+
 function filterNumbers($str){
   $num = 0;
   $inserted = true;
@@ -24,7 +38,7 @@ function filterNumbers($str){
       $prev_num = false;
     }
   }
-  return $array;
+  return sortNumbers($array);
 }
 
 $string = "hpd12aq3@8w$5";
